@@ -13,7 +13,7 @@
 </head>
 
 <body>
-   <div>
+   <div class="careio__superwrapper">
     <!--navigationBar div -->    
     <div class="navbar">
             <div class="logo"> <!--logo div-->
@@ -34,19 +34,43 @@
                     
                 </ul>
             </nav>
-        </div>
+    </div>
+    <!-- end of navbar-->
      <!--header div --> 
      <div class = "header">
          <div class="header-img"><img src="images/banner1.jpg" alt="" class="banner"></div>
                 
          <div class="bg-text">
-        <h1>We care. Metro Vancouver’s <br>Home Service Finder</h1>
-        <a href="" ><button type="button" class="btn btn-primary">&nbsp;&nbsp;Sign Up&nbsp;&nbsp;</button></a>
-        <a href=""><button type="button" class="btn btn-outline-primary">Go Premium</button></a>
-       
-     </div>  
+            <h1>We care. Metro Vancouver’s <br>Home Service Finder</h1>
+            <a href="" ><button type="button" class="btn btn-primary">&nbsp;&nbsp;Sign Up&nbsp;&nbsp;</button></a>
+            <a href=""><button type="button" class="btn btn-outline-primary">Go Premium</button></a>
+        </div>  
 
     </div>
+    <!-- end of header-->
+
+    <div class="careio__body">
+        <!-- 
+            @aman, @sal:
+            Check the code for the tabs here: https://codepen.io/Asmodey/pen/BNZpZv
+        -->
+        <div id="tabs" class="careio--tabs">
+                <!-- tab nav -->            
+                <div class="tab whiteborder">Tab 1</div>
+                <div class="tab">Tab 2</div>
+                <div class="tab">Tab 3</div>
+
+                <!-- tab content-->
+                <div class="tabContent">1</div>
+                <div class="tabContent">2</div>
+                <div class="tabContent">3</div>
+            
+        </div>
+        <!-- end of careio--tabs -->
+    </div>
+    <!-- end of careio__body -->
+
+
 
     <div>
         <hr><!-------footer------->
@@ -55,9 +79,17 @@
     </div>
 
     </div>
+    <!-- end of careio__superwrapper -->
 
     <!--- javascript-->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js" integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous"></script>
+    <!-- add jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <!-- customs -->
+    <script src="./js/reusables.js"></script>
+
+
 </body>
 </html>
