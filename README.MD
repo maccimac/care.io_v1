@@ -1,3 +1,14 @@
+# Setup SASS
+
+1. Check if you have node `node -v` and `npm -v`
+  1.1 Ensure you have node: https://nodejs.org/en/download/
+2. Check if you have sass in system `sass -v`
+  2.1. If not, install sass `npm install -g sass`
+3. In this directory run `sass --watch frontend/styles/main.scss frontend/styles/main.css`
+
+
+---
+
 # Setup GIT and your branch
 
 1. Create a folder in your computer where you want for us all to work on your code for this project. 
@@ -21,7 +32,7 @@ git config --global user.name "<github_username>"
 
 8. Check all branches avaiable in that repository `git branch`
 
-9. Create your own branch. This is the naming convention: <name>/<frontendOrBackend>/<featureYouAreWorkingOn>
+9. Create your own branch. This is the naming convention: `<name>/<frontendOrBackend>/<featureYouAreWorkingOn>`
 example: `git checkout -b aman/frontend/homepageBookingPopup`
 
 10. Run `git branch` again to check if your branch is added and if you are not working in your branch.
