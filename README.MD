@@ -1,10 +1,12 @@
 # Setup SASS
 
 1. Check if you have node `node -v` and `npm -v`
-  1.1 Ensure you have node: https://nodejs.org/en/download/
+    - Ensure you have node: https://nodejs.org/en/download/
 2. Check if you have sass in system `sass -v`
-  2.1. If not, install sass `npm install -g sass`
+    - If not, install sass `npm install -g sass`
 3. In this directory run `sass --watch frontend/styles/main.scss frontend/styles/main.css`
+4. Read this documenation for nesting with sass: https://www.w3schools.com/sass/sass_nesting.php
+
 
 
 ---
