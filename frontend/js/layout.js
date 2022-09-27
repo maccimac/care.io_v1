@@ -2,9 +2,11 @@ import * as Utils from './utils.js'
 
 export const includeNav = async () =>{
     const navHTMLPath = '/frontend/modules/navigation.html'
-    document.getElementById('CareIoNavigation').innerHTML = await Utils.getHtml(navHTMLPath)
+    let navHtmlContent = await Utils.getHtml(navHTMLPath);
+    console.log({navHtmlContent})
+    navHtmlContent  = navHtmlContent ? navHtmlContent : backupNavHtmlContent;
+    document.getElementById('CareIoNavigation').innerHTML = navHtmlContent;
 }
-
 
 export function setupTabs(){
     const tabContent = document.getElementsByClassName('tabContent');
@@ -42,3 +44,36 @@ export function setupTabs(){
 
 }
 
+const backupNavHtmlContent = `
+        <!--navigationBar div -->    
+        <div id="CareNav" class="navbar">
+            <a href="./index.html" class="logo"> <!--logo div-->
+                <p class="logo"> C &nbsp;&nbsp; A &nbsp;&nbsp;R &nbsp;&nbsp;E &nbsp;&nbsp;.&nbsp;i&nbsp;o </p>
+            </a>
+          
+            <nav>
+                <ul>
+                    <li>
+                        <a href="./signup.html">Sign Up</a>
+                        
+                    </li>
+
+                    <li>
+                        <a href="" class="premiumLink">Go Premium!</a>
+                        
+                    </li>
+
+                    <li>
+                        <button
+                            id="LaunchLogin" 
+                            type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalLogin"
+                        >
+                            Log in
+                        </button>
+                    </li>
+                    
+                </ul>
+            </nav>
+    </div>
+    <!-- end of navbar-->
+`
