@@ -1,4 +1,3 @@
-import * as Header from './header.js'
 import * as Utils from './utils.js'
 
 export const includeNav = async () =>{

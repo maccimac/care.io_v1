@@ -27,4 +27,11 @@
   display: block;
 }
 
+.modal#modalLogin button.close {
+  border: none;
+}
+.modal#modalLogin button.login {
+  margin-top: 2rem;
+}
+
 /*# sourceMappingURL=main.css.map */
