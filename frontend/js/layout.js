@@ -1,10 +1,13 @@
-document.addEventListener('DOMContentLoaded', function (){ 
-    console.log('hello world');
-    setupTabs();
-  }, false);
+import * as Header from './header.js'
+import * as Utils from './utils.js'
 
-function setupTabs(){
+export const includeNav = async () =>{
+    const navHTMLPath = '/frontend/modules/navigation.html'
+    document.getElementById('CareIoNavigation').innerHTML = await Utils.getHtml(navHTMLPath)
+}
 
+
+export function setupTabs(){
     const tabContent = document.getElementsByClassName('tabContent');
     const tab= document.getElementsByClassName('tab');
     hideTabsContent(1);
@@ -39,3 +42,4 @@ function setupTabs(){
     }
 
 }
+
