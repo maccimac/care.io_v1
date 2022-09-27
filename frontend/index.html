@@ -1,117 +1,181 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
-    
-    <!--custome stylesheet-->
     <link rel="stylesheet" href="./styles/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <!---font awesome-->
+    <script src="https://kit.fontawesome.com/ef39533af2.js" crossorigin="anonymous"></script>
+    <!--custome stylesheet-->
+
 
 </head>
 
 <body>
-   <div class="careio__superwrapper">
-    <!--navigationBar div -->    
-    <div class="navbar">
-            <div class="logo"> <!--logo div-->
+    <div class="careio__superwrapper">
+        <!--navigationBar div -->
+        <div class="navbar">
+            <div class="logo">
+                <!--logo div-->
                 <p class="logo"> C &nbsp;&nbsp; A &nbsp;&nbsp;R &nbsp;&nbsp;E &nbsp;&nbsp;.&nbsp;i&nbsp;o </p>
             </div>
-          
+
             <nav>
                 <ul>
                     <li>
-                        <a href="" >Sign Up/Login</a>
-                        
+                        <a href="">Sign Up/Login</a>
+
                     </li>
 
                     <li>
                         <a href="" class="premiumLink">Go Premium!</a>
-                        
+
                     </li>
-                    
+
                 </ul>
             </nav>
-    </div>
-    <!-- end of navbar-->
-     <!--header div --> 
-     <div class = "header">
-         <div class="header-img"><img src="images/banner1.jpg" alt="" class="banner"></div>
-                
-         <div class="bg-text">
-            <h1>We care. Metro Vancouver’s <br>Home Service Finder</h1>
-            <a href="" ><button type="button" class="btn btn-primary">&nbsp;&nbsp;Sign Up&nbsp;&nbsp;</button></a>
-            <a href=""><button type="button" class="btn btn-outline-primary">Go Premium</button></a>
-        </div>  
+        </div>
+        <!-- end of navbar-->
+        <!--header div -->
+        <div class="header">
+            <div class="header-img"><img src="images/banner1.jpg" alt="" class="banner"></div>
 
-    </div>
-    <!-- end of header-->
+            <div class="bg-text">
+                <h1>We care. Metro Vancouver’s <br>Home Service Finder</h1>
+                <a href=""><button type="button" class="btn btn-primary">&nbsp;&nbsp;Sign Up&nbsp;&nbsp;</button></a>
+                <a href=""><button type="button" class="btn btn-outline-primary">Go Premium</button></a>
+            </div>
 
-    <div class="careio__body">
-        <!-- 
-            @aman, @sal:
-            Check the code for the tabs here: https://codepen.io/Asmodey/pen/BNZpZv
-        -->
-        <div class="container">
-            <div id="tabs" class="careio--tabs">
-                <!-- tab nav -->            
-                <div class="tab whiteborder">Tab 1</div>
-                <div class="tab">Tab 2</div>
-                <div class="tab">Tab 3</div>
+        </div>
+        <!-- end of header-->
 
-                <!-- tab content-->
-                <div class="row">
-                    <div class="tabContent">
-                        <h3>
-                            Tab 1 content here
-                        </h3>
-                        <div>
-                            <p>111</p>
-                        </div>
+        <div class="careio__body">
+            <!-------tabs menu start-->
+            <div class="btn-box">
+                <button id="btn1" onclick="openHM()"><i class="fa-brands fa-html5"></i>Home Maintenance</button>
+                <button id="btn2"  onclick="openGrooming()"><i class="fa-regular fa-user"></i>Personal Grooming</button>
+                <button id="btn3" onclick="openCareAid()"><i class="fa-solid fa-hand-holding-hand"></i>Care Aid &nbsp;&nbsp;&nbsp;</button>
+            </div>
 
-                    </div>
-                    <div class="tabContent">
-                        <h3>
-                            Tab 2 content here
-                        </h3>
-                        <div>
-                            <p>222</p>
-                        </div>
-                    </div>
-                    <div class="tabContent">
-                        <h3>
-                            Tab 3 content here
-                        </h3>
-                        <div>
-                            <p>333</p>
-                        </div>
-                    </div>
-
+            <div class="content"  id="content1">
+                <div class="content-left">
+                    <img src="images\demo-prof.jpg" alt="Service Provider Img">
                 </div>
+                <div class="content-right">
+                    <h2>Name</h2>
+                    <p>Home Maintenance</p>
+                    <a href="#" ><button type="button" class="btn btn-primary">Book</button></a>
+                </div>
+
                 
-            
-            </div> <!-- end of careio--tabs -->
-        </div> 
-        
-    </div> 
-    <!-- end of careio__body -->
+                
+            </div>
+            <!-- --------------second tab-->
+            <div   id="content2" class="content">
+                <div class="content-left">
+                    <img src="images\demo-prof.jpg" alt="Service Provider Img">
+                </div>
+                <div class="content-right">
+                    <h2>Name</h2>
+                    <p>Personal Grooming</p>
+                    <a href="#" ><button type="button" class="btn btn-primary">Book</button></a>
+                </div>
+            </div>
 
 
+            <!-------third tab-->
+            <div  id="content3" class="content">
+                <div class="content-left">
+                    <img src="images\demo-prof.jpg" alt="Service Provider Img">
+                </div>
+                <div class="content-right">
+                    <h3>Name</h2>
+                    <p>Care Aid</p>
+                    <a href="#" ><button type="button" class="btn btn-primary">Book</button></a>
+                </div>
+            </div>
 
-    <div>
-        <hr><!-------footer------->
-        PS dont curse me for less work ---peace ;s)
-        
+
+        </div>
+        <!-- end of careio__body -->
+
+    </div>
     </div>
 
-    </div>
     <!-- end of careio__superwrapper -->
+     <script>
+
+        var content1 = document.getElementById("content1");
+        var content2= document.getElementById("content2");
+        var content3 = document.getElementById("content3");
+        var btn1 = document.getElementById("btn1");
+        var btn2 = document.getElementById("btn2");
+        var btn3 = document.getElementById("btn3");
+
+        function openHM(){
+            content1.style.transform = "translateX(0)";
+            content2.style.transform = "translateX(600%)";
+            content3.style.transform = "translateX(600%)";
+            
+            btn1.style.backgroundColor = "#3C4F75";
+            btn2.style.backgroundColor = "#FFFFFF";
+            btn3.style.backgroundColor = "#FFFFFF";
+
+            btn1.style.color = "#FFFFFF";
+            btn2.style.color = "#3C4F75";
+            btn3.style.color = "#3C4F75";
+        }
+
+        
+        function openGrooming(){
+            content1.style.transform = "translateX(600%)";
+            content2.style.transform = "translateX(0)";
+            content3.style.transform = "translateX(600%)";
+
+            btn1.style.backgroundColor = "#FFFFFF";
+            btn2.style.backgroundColor = "#3C4F75";
+            btn3.style.backgroundColor = "#FFFFFF";
+
+            btn1.style.color = "#3C4F75";
+            btn2.style.color = "#FFFFFF";
+            btn3.style.color = "#3C4F75";
+            
+
+                        
+        }
+
+        
+        function openCareAid(){
+            content1.style.transform = "translateX(600%)";
+            content2.style.transform = "translateX(600%)";
+            content3.style.transform = "translateX(0)";
+
+            btn1.style.backgroundColor = "#FFFFFF";
+            btn2.style.backgroundColor = "#FFFFFF";
+            btn3.style.backgroundColor = "#3C4F75";
+
+            btn1.style.color = "#3C4F75";
+            btn2.style.color = "#3C4F75";
+            btn3.style.color = "#FFFFFF";
+        }
+
+
+
+     </script>
+
 
     <!--- javascript-->
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js" integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+        integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
+    </script>
     <!-- add jquery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
@@ -120,4 +184,5 @@
 
 
 </body>
+
 </html>
