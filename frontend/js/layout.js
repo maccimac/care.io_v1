@@ -1,16 +1,20 @@
 import * as Utils from './utils.js'
 
 export const includeNav = async () =>{
+    if(!document.getElementById('CareNav')) return
+    
     const navHTMLPath = '/frontend/modules/navigation.html'
     let navHtmlContent = await Utils.getHtml(navHTMLPath);
     console.log({navHtmlContent})
     navHtmlContent  = navHtmlContent ? navHtmlContent : backupNavHtmlContent;
-    document.getElementById('CareIoNavigation').innerHTML = navHtmlContent;
+    document.getElementById('CareNav').innerHTML = navHtmlContent;
 }
 
 export function setupTabs(){
     const tabContent = document.getElementsByClassName('tabContent');
-    const tab= document.getElementsByClassName('tab');
+    const tab = document.getElementsByClassName('tab');
+    if(!tabContent | !tab) return
+    
     hideTabsContent(1);
 
     document.getElementById('tabs').onclick= function (event) {

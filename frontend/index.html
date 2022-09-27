@@ -20,7 +20,7 @@
 <body id="CareHome" class="">
     <div class="careio__superwrapper">
         <!--navigationBar div -->
-        <div class="navbar">
+        <div id="CareNav" class="navbar">
             <div class="logo">
                 <!--logo div-->
                 <p class="logo"> C &nbsp;&nbsp; A &nbsp;&nbsp;R &nbsp;&nbsp;E &nbsp;&nbsp;.&nbsp;i&nbsp;o </p>
@@ -110,68 +110,10 @@
         </div>    
 
     <!-- end of careio__superwrapper -->
-     <script>
-
-        var content1 = document.getElementById("content1");
-        var content2= document.getElementById("content2");
-        var content3 = document.getElementById("content3");
-        var btn1 = document.getElementById("btn1");
-        var btn2 = document.getElementById("btn2");
-        var btn3 = document.getElementById("btn3");
-
-        function openHM(){
-            content1.style.transform = "translateX(0)";
-            content2.style.transform = "translateX(600%)";
-            content3.style.transform = "translateX(600%)";
-            
-            btn1.style.backgroundColor = "#3C4F75";
-            btn2.style.backgroundColor = "#FFFFFF";
-            btn3.style.backgroundColor = "#FFFFFF";
-
-            btn1.style.color = "#FFFFFF";
-            btn2.style.color = "#3C4F75";
-            btn3.style.color = "#3C4F75";
-        }
-
-        
-        function openGrooming(){
-            content1.style.transform = "translateX(600%)";
-            content2.style.transform = "translateX(0)";
-            content3.style.transform = "translateX(600%)";
-
-            btn1.style.backgroundColor = "#FFFFFF";
-            btn2.style.backgroundColor = "#3C4F75";
-            btn3.style.backgroundColor = "#FFFFFF";
-
-            btn1.style.color = "#3C4F75";
-            btn2.style.color = "#FFFFFF";
-            btn3.style.color = "#3C4F75";
-            
-
-                        
-        }
-
-        
-        function openCareAid(){
-            content1.style.transform = "translateX(600%)";
-            content2.style.transform = "translateX(600%)";
-            content3.style.transform = "translateX(0)";
-
-            btn1.style.backgroundColor = "#FFFFFF";
-            btn2.style.backgroundColor = "#FFFFFF";
-            btn3.style.backgroundColor = "#3C4F75";
-
-            btn1.style.color = "#3C4F75";
-            btn2.style.color = "#3C4F75";
-            btn3.style.color = "#FFFFFF";
-        }
-
-
-
-     </script>
 
     <!-- customs -->
     <script src="./js/main.js" type="module"></script>
+    <script src="./js/page-home.js" type=""></script>
     <!--- javascript-->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>

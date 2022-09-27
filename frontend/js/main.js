@@ -1,12 +1,17 @@
 import * as Layout from './layout.js';
 import * as Utils from './utils.js'
 import * as Login from './login.js'
+import * as PageHome from './page-home.js'
 
 document.addEventListener('DOMContentLoaded', function (){
 
-    Layout.includeNav();
-    Layout.setupTabs();
+    Layout.includeNav()
+    Layout.setupTabs()
 
-    Login.includeModalLogin();
+    Login.includeModalLogin()
+
+    // if(document.getElementById('CareHome')) PageHome.setupHome()
 
   }, false);
+
+export * as Home from './page-home.js';  
