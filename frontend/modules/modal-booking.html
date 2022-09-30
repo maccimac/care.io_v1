@@ -1,0 +1,71 @@
+<div 
+  class="modal fade show" id="modalBooking" tabindex="-1" role="dialog"  aria-hidden="true"
+  style="display: block;"
+>
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <!-- <h5 class="modal-title" id="exampleModalLabel">Log in as user</h5> -->
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+          <div id="bookingForm" class="col-md-8 ">
+            <h3>
+              Book
+              <span id="bookingPartnerName">
+                John Sharma
+              </span>
+            </h3>
+
+            <form>
+              <div class="my-4">
+                <h4>Price Per Hour</h4>
+                <strong>$26</strong>/hr
+              </div>
+              
+              <div class="my-4">
+                <h4>Service Type</h4>
+                <div class="form-group">
+                  <div class="form-check d-inline-block mx-3">
+                    <input class="form-check-input" type="checkbox" id="check1" name="option1" value="something" >
+                    <label class="form-check-label">Service 1</label>
+                  </div>
+                  <div class="form-check d-inline-block mx-3">
+                    <input class="form-check-input" type="checkbox" id="check2" name="option2" value="something" checked>
+                    <label class="form-check-label">Service 2</label>
+                  </div>
+                  <div class="form-check d-inline-block mx-3">
+                    <input class="form-check-input" type="checkbox" id="check3" name="option3" value="something" >
+                    <label class="form-check-label">Service 3</label>
+                  </div>
+              </div>  
+
+              </div>
+              
+
+              
+              <button id="submitBooking" type="submit" class="login btn btn-primary">Book</button>
+            </form>
+
+
+          </div>
+
+          <div id="bookingSummary" class="col-md-4 bg--dark">
+            &nbsp;
+
+          </div>
+
+        </div>
+        
+
+      </div>
+      <!-- <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div> -->
+    </div>
+  </div>
+</div>

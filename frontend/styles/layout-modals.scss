@@ -1,11 +1,23 @@
 .modal{
+    button.close{
+        border: none;
+    }
+
     &#modalLogin{
-        button.close{
-            border: none;
-        }
+        
         button.login{
             margin-top: 2rem;
         }
     }
+    &#modalBooking{
+        .modal-dialog{
+            min-width: 95%;
+        }
+        
+        
+
+    }
+
+    
 
 }

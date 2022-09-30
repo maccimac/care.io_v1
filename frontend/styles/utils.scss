@@ -1,0 +1,59 @@
+.bg{
+    &--black{
+        background-color: $CARE_BLACK 
+    }
+    &--dark{
+        background-color: $CARE_DARK
+    }  
+    &--lightest{
+        background-color: $CARE_LIGHTEST
+    }  
+    &--light{
+        background-color: $CARE_LIGHTEST
+    }
+    &--green{
+        background-color: $CARE_GREEN
+    }  
+    &--green-bright{
+        background-color: $CARE_GREEN_BRIGHT
+    }  
+    &--purple{
+        background-color: $CARE_PURPLE
+    }  
+    &--purple-bright{
+        background-color: $CARE_PURPLE_BRIGHT
+    }  
+    &--purple-bright-lt{
+        background-color: $CARE_PURPLE_BRIGHT_LT
+    }  
+}
+
+.text{
+    &--black{
+        color: $CARE_BLACK;
+    }
+    &--dark{
+        color: $CARE_DARK
+    }  
+    &--lightest{
+        color: $CARE_LIGHTEST
+    }  
+    &--light{
+        color: $CARE_LIGHTEST
+    }
+    &--green{
+        color: $CARE_GREEN
+    }  
+    &--green-bright{
+        color: $CARE_GREEN_BRIGHT
+    }  
+    &--purple{
+        color: $CARE_PURPLE
+    }  
+    &--purple-bright{
+        color: $CARE_PURPLE_BRIGHT
+    }  
+    &--purple-bright-lt{
+        color: $CARE_PURPLE_BRIGHT_LT
+    }  
+}

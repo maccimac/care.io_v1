@@ -13,11 +13,12 @@ export const includeNav = async () =>{
 export function setupTabs(){
     const tabContent = document.getElementsByClassName('tabContent');
     const tab = document.getElementsByClassName('tab');
-    if(!tabContent | !tab) return
+    const tabs = document.getElementById('tabs');
+    if(!tabContent | !tab | !tabs) return
     
     hideTabsContent(1);
 
-    document.getElementById('tabs').onclick= function (event) {
+    tabs.onclick= function (event) {
         var target=event.target;
         if (target.className=='tab') {
             for (var i=0; i<tab.length; i++) {
