@@ -87,14 +87,43 @@
   display: block;
 }
 
+.modal .care--modal-close__wrapper {
+  color: #fff;
+  font-size: 20px;
+  background-color: transparent;
+  height: 2rem;
+  margin-top: -2rem;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
 .modal button.close {
   border: none;
+}
+.modal h4 {
+  font-weight: 400;
+  font-size: 13px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
 }
 .modal#modalLogin button.login {
   margin-top: 2rem;
 }
 .modal#modalBooking .modal-dialog {
   min-width: 95%;
+  max-width: 800px;
+}
+.modal#modalBooking #bookingDatepicker {
+  z-index: 1;
+  max-width: 240px;
+}
+.modal#modalBooking .booking-summary {
+  border-bottom-right-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+#ui-datepicker-div {
+  filter: drop-shadow(12px 12px 40px #282D37);
 }
 
 /*# sourceMappingURL=main.css.map */
