@@ -89,7 +89,6 @@
 
 .modal .care--modal-close__wrapper {
   color: #fff;
-  font-size: 20px;
   background-color: transparent;
   height: 2rem;
   margin-top: -2rem;
@@ -99,6 +98,9 @@
 }
 .modal button.close {
   border: none;
+  background-color: transparent;
+  font-size: 24px;
+  color: #F7F7F2;
 }
 .modal h4 {
   font-weight: 400;
@@ -106,11 +108,14 @@
   letter-spacing: 3px;
   text-transform: uppercase;
 }
+.modal .modal-content {
+  border: none;
+}
 .modal#modalLogin button.login {
   margin-top: 2rem;
 }
 .modal#modalBooking .modal-dialog {
-  min-width: 95%;
+  min-width: 85%;
   max-width: 800px;
 }
 .modal#modalBooking #bookingDatepicker {
