@@ -4,7 +4,7 @@ import * as Utils from './utils.js'
 export const includeModalLogin = async () =>{
     document.getElementById('CareIOModalLogin').innerHTML = await Utils.getHtml('/frontend/modules/modal-login.html')
 
-    document.querySelector('#CareNav button#LaunchLogin').addEventListener('click', generateToken)
+    // document.querySelector('#CareNav button#LaunchLogin').addEventListener('click', generateToken)
 
     document.querySelector('#CareIOModalLogin #submitLogin').addEventListener(
         'click', onSubmit
@@ -28,7 +28,6 @@ const generateToken = async () => {
     }catch(err){
         console.log(err.message)
     }
-
 }
 
 const onSubmit = async (evt) => {

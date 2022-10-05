@@ -20,7 +20,7 @@
 
 </head>
 
-<body id="CareHome" class="modal-show">
+<body id="CareHome" class="x_modal-show">
     <div class="careio__superwrapper">
         <!--navigationBar div -->
         <div id="CareNav" class="navbar">
@@ -73,7 +73,13 @@
                 <div class="content-right">
                     <h2>Name</h2>
                     <p>Home Maintenance</p>
-                    <a href="#" ><button type="button" class="btn btn-primary">Book</button></a>
+                    <button 
+                        type="button" 
+                        class="btn btn-primary"
+                        data-toggle="modal" data-target="#modalBooking"
+                    >
+                        Book
+                    </button>
                 </div>
 
                 
@@ -107,7 +113,13 @@
                 <div class="content-right">
                     <h3>Name</h2>
                     <p>Care Aid</p>
-                    <a href="#" ><button type="button" class="btn btn-primary">Book</button></a>
+                    <button 
+                        type="button" 
+                        class="btn btn-primary"
+                        data-toggle="modal" data-target="#modalBooking"
+                    >
+                        Book
+                    </button>
                 </div>
             </div>
 
@@ -123,7 +135,7 @@
             </div> 
 
 
-            <div class="modal-backdrop fade show"></div>
+            <!-- <div class="modal-backdrop fade show"></div> -->
 
         </div>
 

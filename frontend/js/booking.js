@@ -6,6 +6,10 @@ export const includeModalBooking = async () =>{
     document.getElementById('CareIOModalBooking').innerHTML = await Utils.getHtml('/frontend/modules/modal-booking.html')
     jq.setupDatePicker()
     setupHoursDropdown()
+    document.getElementById('CareIOModalBooking').addEventListener('click', (evt) =>{
+        evt.preventDefault()
+        getBookings()
+    })
 }
 
 const operatingHours = [
@@ -68,9 +72,27 @@ export const setupHoursDropdown = () => {
     })
 }
 
-
-
-
 export const updateEndHrOpts = () => {
 
+}
+
+export const getBookings = async (evt) => {
+    // evt.preventDefault()
+    alert('getting bookings')
+    try{
+        const res = await fetch(`${Config.HOST}/booking`, {
+            method: 'GET',
+            mode: 'cors',
+            headers: {
+                'Content-Type': 'application/json',
+                'Access-Control-Allow-Origin': '*',
+                'Access-Control-Allow-Methods': 'DELETE, POST, GET, OPTIONS',
+                'Access-Control-Allow-Headers':'Content-Type, Authorization, X-Requested-With'
+            }
+            
+        })
+        console.log(res);
+    }catch(err){
+        console.log(err.message)
+    }
 }
