@@ -11,7 +11,7 @@ export const getHtml = async (url) =>{
                 // 'Access-Control-Allow-Headers':'Content-Type, Authorization, X-Requested-With'
             }
         });
-        console.log(res)
+        // console.log(res)
         htmlContent = await res.text()
     } catch(err){
         console.log(err)

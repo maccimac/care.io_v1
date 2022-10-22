@@ -76,23 +76,118 @@ export const updateEndHrOpts = () => {
 
 }
 
-export const getBookings = async (evt) => {
-    // evt.preventDefault()
-    alert('getting bookings')
+export const sampleFetchTest = () => {
+    console.log("This functioon demonstrates that the files is able to fetch from other servers")
+
+    const update = {
+        title: 'A blog post by Kingsley',
+        body: 'Brilliant post on fetch API',
+        userId: 1,
+    };
+    
+    const options = {
+        method: 'POST',
+        headers: {
+        'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(update),
+    };
+
+    fetch('https://jsonplaceholder.typicode.com/posts', options)
+    .then(data => {
+        if (!data.ok) {
+            throw Error(data.status);
+        }
+        return data.json();
+        }).then(update => {
+            console.log(update);
+        }).catch(e => {
+            console.log(e);
+        });
+}
+
+export const getBookings = (evt) => {
+    console.log('getBookings')
+
     try{
-        const res = await fetch(`${Config.HOST}/booking`, {
+        fetch(`${Config.HOST}/booking`, {
             method: 'GET',
-            mode: 'cors',
+            mode: 'no-cors',
             headers: {
                 'Content-Type': 'application/json',
                 'Access-Control-Allow-Origin': '*',
                 'Access-Control-Allow-Methods': 'DELETE, POST, GET, OPTIONS',
                 'Access-Control-Allow-Headers':'Content-Type, Authorization, X-Requested-With'
-            }
-            
+            },
+            json: true 
+        }).then(res=>{
+            console.log(res)
+            return res.json()
+        }).then( data => {
+            console.log({data})
         })
-        console.log(res);
+        
+        // const res = await fetch(`${Config.HOST}/booking`, {
+        //     method: 'GET',
+        //     mode: 'no-cors',
+        //     headers: {
+        //         'Content-Type': 'application/json',
+        //         'Access-Control-Allow-Origin': '*',
+        //         'Access-Control-Allow-Methods': 'DELETE, POST, GET, OPTIONS',
+        //         'Access-Control-Allow-Headers':'Content-Type, Authorization, X-Requested-With'
+        //     }  
+        // })
+        // console.log(res);
+        // console.log(res.body)
+
     }catch(err){
-        console.log(err.message)
+        console.log("error message", err.message)
     }
+}
+
+export const getSingleBooking = async (bookingId) =>{
+        console.log('getSingleBooking') 
+        try{
+            const res = await fetch(`${Config.HOST}/booking?1`, {
+                method: 'GET',
+                mode: 'no-cors',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Access-Control-Allow-Origin': '*',
+                    'Access-Control-Allow-Methods': 'DELETE, POST, GET, OPTIONS',
+                    'Access-Control-Allow-Headers':'Content-Type, Authorization, X-Requested-With'
+                } ,
+                // body:{
+                //     'bookingId': bookingId
+                // }  
+            })
+            console.log(res);
+            // console.log(res.json());
+        }catch(err){
+            console.log("error message", err.message)
+        }
+
+    /* 
+        try{
+            fetch(`${Config.HOST}/booking`, {
+                method: 'POST',
+                mode: 'no-cors',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Access-Control-Allow-Origin': '*',
+                    'Access-Control-Allow-Methods': 'DELETE, POST, GET, OPTIONS',
+                    'Access-Control-Allow-Headers':'Content-Type, Authorization, X-Requested-With'
+                },
+                body:{
+                    bookingId: bookingId
+                }  
+            }).then(res=>{
+                return res.json()
+            }).then( data => {
+                console.log(data)
+            })
+        }catch(err){
+            console.log("error message", err.message)
+        }
+    */
 }
