@@ -1,3 +1,10 @@
+# Live Server
+1. Install Liver Server in Visual Studio Code https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer
+2. Select Go Live icon on bottom right of Visual Studio Code window (blue bar)
+3. Go to localhost:5500
+
+---
+
 # Setup SASS
 
 1. Check if you have node `node -v` and `npm -v`

@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', function (){
     } 
 
     Booking.getBookings()
-    Booking.getSingsleBooking(1)
+    Booking.getSingleBooking(1)
 
     // jquery
     // $("#modalBooking").modal("show");
