@@ -115,8 +115,8 @@
   margin-top: 2rem;
 }
 .modal#modalBooking .modal-dialog {
-  min-width: 85%;
-  max-width: 800px;
+  min-width: 50%;
+  max-width: 480px;
 }
 .modal#modalBooking #bookingDatepicker {
   z-index: 1;
