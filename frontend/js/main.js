@@ -1,3 +1,4 @@
+import * as Config from './config.js'
 import * as Layout from './layout.js';
 import * as Utils from './utils.js'
 import * as Login from './login.js'
@@ -6,6 +7,7 @@ import * as PageHome from './page-home.js'
 
 
 document.addEventListener('DOMContentLoaded', function (){
+    apiTest();
 
     Booking.sampleFetchTest();
     Layout.includeNav()
@@ -26,4 +28,26 @@ document.addEventListener('DOMContentLoaded', function (){
 
   }, false);
 
-export * as Home from './page-home.js';  
+const apiTest = async  () =>{
+  try{
+    const res = await fetch(`${Config.HOST}/users`, {
+        method: 'GET',
+        mode: 'no-cors',
+        headers: {
+            'Content-Type': 'application/json',
+            'Access-Control-Allow-Origin': '*',
+            'Access-Control-Allow-Methods': 'DELETE, POST, GET, OPTIONS',
+            'Access-Control-Allow-Headers':'Content-Type, Authorization, X-Requested-With'
+        }
+        
+    })
+    console.log(res);
+}catch(err){
+    console.log(err.message)
+}
+
+}
+
+
+
+  export * as Home from './page-home.js';  
