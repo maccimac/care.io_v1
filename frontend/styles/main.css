@@ -1,3 +1,63 @@
+.bg--black {
+  background-color: #111111;
+}
+.bg--dark {
+  background-color: #282D37;
+}
+.bg--lightest {
+  background-color: #F7F7F2;
+}
+.bg--light {
+  background-color: #F7F7F2;
+}
+.bg--green {
+  background-color: #5FAB8F;
+}
+.bg--green-bright {
+  background-color: #3DCF9E;
+}
+.bg--purple {
+  background-color: #3C4F75;
+}
+.bg--purple-bright {
+  background-color: #325AA9;
+}
+.bg--purple-bright-lt {
+  background-color: #92B6FF;
+}
+
+.text--black {
+  color: #111111;
+}
+.text--dark {
+  color: #282D37;
+}
+.text--lightest {
+  color: #F7F7F2;
+}
+.text--light {
+  color: #F7F7F2;
+}
+.text--green {
+  color: #5FAB8F;
+}
+.text--green-bright {
+  color: #3DCF9E;
+}
+.text--purple {
+  color: #3C4F75;
+}
+.text--purple-bright {
+  color: #325AA9;
+}
+.text--purple-bright-lt {
+  color: #92B6FF;
+}
+
+.btn-box {
+  display: flex;
+}
+
 #tabs .tab {
   display: inline-block;
   padding: 5px 10px;
@@ -27,11 +87,48 @@
   display: block;
 }
 
-.modal#modalLogin button.close {
+.modal .care--modal-close__wrapper {
+  color: #fff;
+  background-color: transparent;
+  height: 2rem;
+  margin-top: -2rem;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+.modal button.close {
+  border: none;
+  background-color: transparent;
+  font-size: 24px;
+  color: #F7F7F2;
+}
+.modal h4 {
+  font-weight: 400;
+  font-size: 13px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+.modal .modal-content {
   border: none;
 }
 .modal#modalLogin button.login {
   margin-top: 2rem;
+}
+.modal#modalBooking .modal-dialog {
+  min-width: 85%;
+  max-width: 800px;
+}
+.modal#modalBooking #bookingDatepicker {
+  z-index: 1;
+  max-width: 240px;
+}
+.modal#modalBooking .booking-summary {
+  border-bottom-right-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+#ui-datepicker-div {
+  filter: drop-shadow(12px 12px 40px #282D37);
 }
 
 /*# sourceMappingURL=main.css.map */

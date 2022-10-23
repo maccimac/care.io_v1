@@ -1,11 +1,52 @@
 .modal{
+    .care--modal-close__wrapper{
+        color:#fff;
+        background-color: transparent;
+        height: 2rem;
+        margin-top: -2rem;
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+    }
+    button.close{
+        border: none;
+        background-color: transparent;
+        font-size: 24px;
+        color: $CARE_LIGHTEST;
+    }
+    h4{
+        font-weight: 400;
+        font-size: 13px;
+        letter-spacing: 3px;
+        text-transform: uppercase;
+    }
+    .modal-content{
+        border: none
+    }
+
     &#modalLogin{
-        button.close{
-            border: none;
-        }
+        
         button.login{
             margin-top: 2rem;
         }
     }
+    &#modalBooking{
+        .modal-dialog{
+            min-width: 85%;
+            max-width: 800px;
+        }
+        #bookingDatepicker{
+            z-index: 1;
+            max-width: 240px;
+        }
+        .booking-summary{
+            border-bottom-right-radius: 8px;
+            border-top-right-radius: 8px;
+        }
 
+    }
+
+}
+#ui-datepicker-div{
+    filter: drop-shadow(12px 12px 40px $CARE_DARK)
 }
