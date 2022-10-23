@@ -112,10 +112,11 @@ export const getBookings = (evt) => {
     try{
         fetch(`${Config.HOST}/booking`, {
             method: 'GET',
-            mode: 'no-cors',
+            credentials:'include',
             headers: {
                 'Content-Type': 'application/json',
                 'Access-Control-Allow-Origin': '*',
+                'Authorization' : "Basic cm9vdDpyb290",
                 'Access-Control-Allow-Methods': 'DELETE, POST, GET, OPTIONS',
                 'Access-Control-Allow-Headers':'Content-Type, Authorization, X-Requested-With'
             },
@@ -150,10 +151,11 @@ export const getSingleBooking = async (bookingId) =>{
         try{
             const res = await fetch(`${Config.HOST}/booking?1`, {
                 method: 'GET',
-                mode: 'no-cors',
+                credentials:'include',
                 headers: {
                     'Content-Type': 'application/json',
                     'Access-Control-Allow-Origin': '*',
+                    'Authorization' : "Basic cm9vdDpyb290",
                     'Access-Control-Allow-Methods': 'DELETE, POST, GET, OPTIONS',
                     'Access-Control-Allow-Headers':'Content-Type, Authorization, X-Requested-With'
                 } ,
@@ -162,6 +164,7 @@ export const getSingleBooking = async (bookingId) =>{
                 // }  
             })
             console.log(res);
+            console.log(res.body);
             // console.log(res.json());
         }catch(err){
             console.log("error message", err.message)

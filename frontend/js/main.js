@@ -30,14 +30,18 @@ document.addEventListener('DOMContentLoaded', function (){
 
 const apiTest = async  () =>{
   try{
+    let username = 'root';
+    let password = 'root';
+
     const res = await fetch(`${Config.HOST}/users`, {
         method: 'GET',
-        mode: 'no-cors',
+        credentials:'include',
         headers: {
             'Content-Type': 'application/json',
             'Access-Control-Allow-Origin': '*',
+            'Authorization': 'Basic cm9vdDpyb290',
             'Access-Control-Allow-Methods': 'DELETE, POST, GET, OPTIONS',
-            'Access-Control-Allow-Headers':'Content-Type, Authorization, X-Requested-With'
+            'Access-Control-Allow-Headers':'Content-Type,Authorization, X-Requested-With'
         }
         
     })
