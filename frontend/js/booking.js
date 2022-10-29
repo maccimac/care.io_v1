@@ -133,7 +133,7 @@ export const getBookings = (evt) => {
             console.log(res)
             return res.json()
         }).then( data => {
-            console.log({data})
+            console.log('getBookings', {data})
         })
         
 
@@ -145,16 +145,34 @@ export const getBookings = (evt) => {
 export const createBooking = (evt) => {
     console.log('createBookings')
 
+    // console.log(new Date())
+    // console.log(new Date().getTime())
+
     try{
-        const bodySample = {
-            userId : 222,
-            servicePartnerID : 333,
-            bookingDate : Date.now(),
-            startTime: '07:00',
-            endTime: '12:00',
-            totalPrice: '150',
-            isFinished: 0
+
+        const bodySample ={
+            "userId": 999,
+            "serviceProviderId": 111,
+            "bookingDate": "2022-10-01T00:00:00",
+            "startTime": "2022-10-28T17:54:17",
+            "endTime": "2022-10-04T20:51:50",
+            "totalPrice": 123,
+            "bookingKey": "123",
+            "isFinished": 0
         }
+        // const bodySample = {
+        //     userId : 222,
+        //     serviceProviderID : 333,
+        //     bookingDate : "2022-10-31",
+        //     startTime:  "2022-10-31 06:24:00",
+        //     endTime:  "2022-10-31 06:24:00", // 2022-10-31 06:24:00
+        //     totalPrice: '150',
+        //     bookingKey: 'abcd',
+        //     isFinished: 0
+        // }
+
+        console.log(JSON.stringify(bodySample))
+
         fetch(`${Config.HOST}/booking`, {
             method: 'POST',
             credentials:'include',
@@ -168,22 +186,36 @@ export const createBooking = (evt) => {
             body: JSON.stringify(bodySample),
             json: true 
         }).then(res=>{
-            console.log(res)
+            console.log('createBooking', {res})
             return res.json()
         }).then( data => {
-            console.log({data})
+            console.log('createBooking', {data})
         })
         
+
+                
+// "booking_id" : "null"
+//         "user_id": 222,
+//     "service_provider_id": 333,
+//     "booking_date": "2022-10-31",
+//     "start_time": "2022-10-31 06:24:00",
+//     "end_time": "2022-10-31 06:24:00",
+//     "total_price": "150.00",
+//     "booking_key": "abcd",
+//     "is_finished": 0
+    // INSERT INTO `booking` (`booking_id`, `user_id`, `service_provider_id`, `booking_date`, `start_time`, `end_time`, `total_price`, `booking_key`, `is_finished`) VALUES (NULL, '11', '11', '2022-10-29', '2022-10-31 06:24:00', '2022-10-31 06:24:00', '90', '123', b'0');
+
+        //  '11', '11', '2022-10-29', '2022-10-31 06:24:00', '2022-10-31 06:24:00', '90', '123', b'0'
 
     }catch(err){
         console.log("error message", err.message)
     }
 }
 
-export const getSingleBooking = async (bookingId) =>{
+export const getSingleBooking = (bookingId) =>{
         console.log('getSingleBooking') 
         try{
-            const res = await fetch(`${Config.HOST}/booking?${bookingId}`, {
+            fetch(`${Config.HOST}/booking?${bookingId}`, {
                 method: 'GET',
                 credentials:'include',
                 headers: {
@@ -193,12 +225,14 @@ export const getSingleBooking = async (bookingId) =>{
                     'Access-Control-Allow-Methods': 'DELETE, POST, GET, OPTIONS',
                     'Access-Control-Allow-Headers':'Content-Type, Authorization, X-Requested-With'
                 } ,
-                // body:{
-                //     'bookingId': bookingId
-                // }  
+            }).then(res=>{
+                console.log('singleBooking', {res})
+                return res.json()
+            }).then( data => {
+                console.log('singleBooking', {data})
             })
-            console.log(res);
-            console.log(res.body);
+            // console.log(res);
+            // console.log('getSingleBooking', res.body);
             // console.log(res.json());
         }catch(err){
             console.log("error message", err.message)

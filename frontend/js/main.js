@@ -15,8 +15,8 @@ document.addEventListener('DOMContentLoaded', function (){
       Booking.includeModalBooking()      
     } 
 
-    // Booking.getBookings()
-    // Booking.getSingleBooking(1)
+    Booking.getBookings()
+    Booking.getSingleBooking(2)
     Booking.createBooking()
      
 

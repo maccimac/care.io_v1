@@ -1,7 +1,8 @@
 # Live Server
-1. Install Liver Server in Visual Studio Code https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer
-2. Select Go Live icon on bottom right of Visual Studio Code window (blue bar)
-3. Go to localhost:5500
+1. In Visual Studio Code browse extensions and find the Live Server extension with 27 million downloads
+2. Install Liver Server in Visual Studio Code https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer
+3. Select Go Live icon on bottom right of Visual Studio Code window (blue bar)
+4. Go to localhost:5500
 
 ---
 
