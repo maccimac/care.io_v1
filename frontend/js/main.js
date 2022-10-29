@@ -7,23 +7,17 @@ import * as PageHome from './page-home.js'
 
 
 document.addEventListener('DOMContentLoaded', function (){
-    apiTest();
-
-    Booking.sampleFetchTest();
     Layout.includeNav()
     Layout.setupTabs()
     Login.includeModalLogin()
 
     if(document.getElementById('CareHome')){
-      // PageHome.setupHome()
       Booking.includeModalBooking()      
     } 
 
-    Booking.getBookings()
-    Booking.getSingleBooking(1)
-
-    // jquery
-    // $("#modalBooking").modal("show");
+    // Booking.getBookings()
+    // Booking.getSingleBooking(1)
+    Booking.createBooking()
      
 
   }, false);

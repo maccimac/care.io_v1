@@ -6,10 +6,18 @@ export const includeModalBooking = async () =>{
     document.getElementById('CareIOModalBooking').innerHTML = await Utils.getHtml('/frontend/modules/modal-booking.html')
     jq.setupDatePicker()
     setupHoursDropdown()
+
     document.getElementById('CareIOModalBooking').addEventListener('click', (evt) =>{
         evt.preventDefault()
         getBookings()
     })
+
+    document.getElementById('SubmitBooking').addEventListener('click', (evt) =>{
+        evt.preventDefault()
+        createBooking()
+    })
+
+    // submitBooking
 }
 
 const operatingHours = [
@@ -128,18 +136,44 @@ export const getBookings = (evt) => {
             console.log({data})
         })
         
-        // const res = await fetch(`${Config.HOST}/booking`, {
-        //     method: 'GET',
-        //     mode: 'no-cors',
-        //     headers: {
-        //         'Content-Type': 'application/json',
-        //         'Access-Control-Allow-Origin': '*',
-        //         'Access-Control-Allow-Methods': 'DELETE, POST, GET, OPTIONS',
-        //         'Access-Control-Allow-Headers':'Content-Type, Authorization, X-Requested-With'
-        //     }  
-        // })
-        // console.log(res);
-        // console.log(res.body)
+
+    }catch(err){
+        console.log("error message", err.message)
+    }
+}
+
+export const createBooking = (evt) => {
+    console.log('createBookings')
+
+    try{
+        const bodySample = {
+            userId : 222,
+            servicePartnerID : 333,
+            bookingDate : Date.now(),
+            startTime: '07:00',
+            endTime: '12:00',
+            totalPrice: '150',
+            isFinished: 0
+        }
+        fetch(`${Config.HOST}/booking`, {
+            method: 'POST',
+            credentials:'include',
+            headers: {
+                'Content-Type': 'application/json',
+                'Access-Control-Allow-Origin': '*',
+                'Authorization' : "Basic cm9vdDpyb290",
+                'Access-Control-Allow-Methods': 'DELETE, POST, GET, OPTIONS',
+                'Access-Control-Allow-Headers':'Content-Type, Authorization, X-Requested-With'
+            },
+            body: JSON.stringify(bodySample),
+            json: true 
+        }).then(res=>{
+            console.log(res)
+            return res.json()
+        }).then( data => {
+            console.log({data})
+        })
+        
 
     }catch(err){
         console.log("error message", err.message)
@@ -149,7 +183,7 @@ export const getBookings = (evt) => {
 export const getSingleBooking = async (bookingId) =>{
         console.log('getSingleBooking') 
         try{
-            const res = await fetch(`${Config.HOST}/booking?1`, {
+            const res = await fetch(`${Config.HOST}/booking?${bookingId}`, {
                 method: 'GET',
                 credentials:'include',
                 headers: {
@@ -170,27 +204,4 @@ export const getSingleBooking = async (bookingId) =>{
             console.log("error message", err.message)
         }
 
-    /* 
-        try{
-            fetch(`${Config.HOST}/booking`, {
-                method: 'POST',
-                mode: 'no-cors',
-                headers: {
-                    'Content-Type': 'application/json',
-                    'Access-Control-Allow-Origin': '*',
-                    'Access-Control-Allow-Methods': 'DELETE, POST, GET, OPTIONS',
-                    'Access-Control-Allow-Headers':'Content-Type, Authorization, X-Requested-With'
-                },
-                body:{
-                    bookingId: bookingId
-                }  
-            }).then(res=>{
-                return res.json()
-            }).then( data => {
-                console.log(data)
-            })
-        }catch(err){
-            console.log("error message", err.message)
-        }
-    */
 }
