@@ -20,7 +20,7 @@
           <div id="bookingForm" class="x-col-md-8 p-5">
             <h3>
               Book
-              <span id="bookingPartnerName">
+              <span id="partnerName">
                 John Sharma
               </span>
             </h3>
@@ -28,12 +28,12 @@
             <form>
               <div class="my-4">
                 <h4>Price Per Hour</h4>
-                <strong>$26</strong>/hr
+                $<strong id="partnerRate">26</strong>/hr
               </div>
               
               <div class="my-4">
                 <h4>Service Type</h4>
-                <div class="form-group">
+                <div id="partnerServices" class="form-group">
                   <div class="form-check d-inline-block mx-3">
                     <input class="form-check-input" type="checkbox" id="check1" name="option1" value="something" >
                     <label class="form-check-label">Service 1</label>
@@ -91,7 +91,7 @@
               
 
               
-              <button id="submitBooking" type="submit" class="login btn btn-primary">Book</button>
+              <button id="SubmitBooking" type="submit" class="login btn btn-primary">Book</button>
             </form>
 
 

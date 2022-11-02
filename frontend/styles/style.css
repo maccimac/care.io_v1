@@ -224,7 +224,7 @@ p{
 }
 
 .content{
-    display: flex;
+    /* display: flex; */
     justify-content: center;
     text-align: center;
     margin: 5% auto;

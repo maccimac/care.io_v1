@@ -2,15 +2,21 @@ import * as Config from './config.js'
 import * as Utils from './utils.js'
 import * as jq from './jquery.js'
 
+
+
 export const includeModalBooking = async () =>{
     document.getElementById('CareIOModalBooking').innerHTML = await Utils.getHtml('/frontend/modules/modal-booking.html')
     jq.setupDatePicker()
     setupHoursDropdown()
 
-    document.getElementById('CareIOModalBooking').addEventListener('click', (evt) =>{
-        evt.preventDefault()
-        getBookings()
-    })
+    jq.onBookingModalOpen(setupModalTexts)
+
+    // document.getElementById('CareIOModalBooking').addEventListener('click', (evt) =>{
+    //     evt.preventDefault()
+    //     setupModalTexts()
+    //     getBookings()
+    // })
+
 
     document.getElementById('SubmitBooking').addEventListener('click', (evt) =>{
         evt.preventDefault()
@@ -237,5 +243,40 @@ export const getSingleBooking = (bookingId) =>{
         }catch(err){
             console.log("error message", err.message)
         }
+
+}
+
+const sampleProvider = {
+    name: "Johnny Depp",
+    price: 26,
+    services: [
+        'Cleaning',
+        'Lawn maintenance',
+        'Moving and packing',
+        'Repairs'
+    ]
+}
+
+const setupModalTexts = (provider = sampleProvider)  => {
+    alert('text')
+    const setIdToText = (id, text) => {
+        document.querySelector(`#modalBooking #${id}`)
+        .innerHTML = provider[`${text}`];
+    }
+    setIdToText('partnerName', 'name');
+    setIdToText('partnerRate', 'price');
+
+    let serviceOptions = ""
+    provider.services.forEach(svc => {
+        serviceOptions += `
+        <div class="form-check d-inline-block mx-3">
+                    <input class="form-check-input" type="checkbox" id="check1" name="services[]" value="${svc}" >
+                    <label class="form-check-label">${svc}</label>
+                  </div>`
+    });
+
+    document.querySelector(`#modalBooking #partnerServices`)
+        .innerHTML = serviceOptions;
+    
 
 }

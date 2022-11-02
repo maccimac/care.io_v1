@@ -131,4 +131,13 @@
   filter: drop-shadow(12px 12px 40px #282D37);
 }
 
+#CareHome .careio-partner-catalogue h2 {
+  font-height: 18px;
+}
+#CareHome .careio-partner-catalogue .partner-services {
+  list-style: none;
+  font-size: 14px;
+  display: inline-block;
+}
+
 /*# sourceMappingURL=main.css.map */

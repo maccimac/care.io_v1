@@ -27,8 +27,13 @@ export const setupDatePicker = () =>{
 
         $( "#bookingDatepicker" ).datepicker( "option", "dateFormat", "D, d M y" );
 
-
-    
-
     }
+}
+
+export const onBookingModalOpen = (callback) => {
+    $('#modalBooking').on('shown.bs.modal', function () {
+        alert('opened')
+        console.log('hey')
+        callback()
+      })
 }
