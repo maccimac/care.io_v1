@@ -5,15 +5,14 @@ import * as Login from './login.js'
 import * as Booking from './booking.js'
 import * as PageHome from './page-home.js'
 
+//App component of React.js
 
 document.addEventListener('DOMContentLoaded', function (){
     Layout.includeNav()
     Layout.setupTabs()
     Login.includeModalLogin()
 
-    if(document.getElementById('CareHome')){
-      Booking.includeModalBooking()      
-    } 
+    Booking.includeModalBooking()
 
     Booking.getBookings()
     Booking.getSingleBooking(2)

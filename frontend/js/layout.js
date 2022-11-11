@@ -1,5 +1,6 @@
 import * as Utils from './utils.js'
 
+//Same html is included everywhere.
 export const includeNav = async () =>{
     if(!document.getElementById('CareNav')) return
     
